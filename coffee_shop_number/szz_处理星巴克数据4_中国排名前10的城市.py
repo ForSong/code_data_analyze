@@ -10,7 +10,7 @@ df = df[df["Country"] == "CN"]
 
 # 使用matplotlib呈现出店铺总数排名前10的国家
 # 准备数据
-data1 = df.groupby(by="City").count()["Brand"].sort_values(ascending=False)[:25]
+data1 = df.groupby(by="City").count()["Brand"].sort_values(ascending=False).head(25)
 
 # 设置坐标
 _x = data1.index
